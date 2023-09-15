@@ -1,0 +1,51 @@
+{
+  // Place your eslint-config-tbhw workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+  // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+  // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+  // used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+  // Placeholders with the same ids are connected.
+  // Example:
+  // "Print to console": {
+  // 	"scope": "javascript,typescript",
+  // 	"prefix": "log",
+  // 	"body": [
+  // 		"console.log('$1');",
+  // 		"$2"
+  // 	],
+  // 	"description": "Log output to console"
+  // }
+  "Base Config File": {
+    "scope": "javascript",
+    "prefix": "template-config-file",
+    "isFileTemplate": true,
+    "body": [
+      "/**",
+      " * @type import(\"eslint-define-config\").ESLintConfig",
+      " */",
+      "const config = {",
+      "    extends: [\"$0\"],",
+      "    plugins: [],",
+      "    rules: {}",
+      "}",
+      "",
+      "module.exports = config;",
+      ""
+    ]
+  },
+  "Readme Configuration Description": {
+    "scope": ["markdown", "md"],
+    "prefix": "config-template",
+    "body": [
+      "### ${1:config_name}",
+      "",
+      "$0",
+      "",
+      "#### Peer Dependencies",
+      "",
+      "- `${2:package_name}`",
+      "- ${3:package_name}",
+      ""
+    ]
+  }
+}
