@@ -62,7 +62,7 @@ This config enables a _highly_ opinionated set of rules for TypeScript. This wil
 
 - `typescript`
 - `@typescript-eslint/parser`
-- `@typescript-eslint/plugin`
+- `@typescript-eslint/eslint-plugin`
 - `eslint-import-resolver-typescript`
 - `eslint-plugin-import`
 
