@@ -14,7 +14,7 @@ const config = {
       node: true,
     },
   },
-  plugins: ["@typescript-eslint"],
+  plugins: ["@typescript-eslint", "import"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     project: true,

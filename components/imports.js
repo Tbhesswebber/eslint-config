@@ -3,7 +3,7 @@
  */
 const config = {
   extends: ["plugin:import/recommended"],
-  plugins: ["import/recommended"],
+  plugins: ["import"],
   rules: {
     "import/newline-after-import": [
       "error",
