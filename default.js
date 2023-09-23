@@ -6,8 +6,8 @@ const config = {
     "eslint:recommended",
     "airbnb-base",
     "plugin:unicorn/recommended",
-    "@tbhesswebber/eslint-plugin/components/comments",
-    "@tbhesswebber/eslint-plugin/components/imports",
+    "@tbhesswebber/eslint-config/components/comments",
+    "@tbhesswebber/eslint-config/components/imports",
   ],
   plugins: ["unicorn"],
   rules: {
