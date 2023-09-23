@@ -14,6 +14,14 @@ const config = {
     "unicorn/custom-error-definition": "error",
     "unicorn/no-keyword-prefix": "warn"
   },
+  overrides: [
+    {"files": ["**/*.config.js"], rules: {
+      "unicorn/prefer-module": "off"
+    }},
+    {"files": ["*-env.d.ts"], rules: {
+      "unicorn/prevent-abbreviations": "off"
+    }}
+  ]
 };
 
 module.exports = config;

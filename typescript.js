@@ -4,7 +4,9 @@
 const config = {
   extends: [
     "plugin:import/typescript",
+    "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-type-checked",
+    "plugin:@typescript-eslint/strict",
     "plugin:@typescript-eslint/strict-type-checked",
     "plugin:@typescript-eslint/stylistic",
   ],
