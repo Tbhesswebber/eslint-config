@@ -2,8 +2,8 @@
 name: Rule-specific Improvement
 about: 'Have a suggestion for how to improve a rule''s default configuration? Let''s
   hear it! '
-title: "[RULE]"
-labels: ''
+title: ''
+labels: rule-change
 assignees: ''
 
 ---
