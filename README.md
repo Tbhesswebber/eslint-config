@@ -25,7 +25,7 @@ If using a named config, make sure that you use `@tbhesswebber/eslint-config/<co
 
 ### Default
 
-This is the default config and it is the same as using `all`, but without `@tbhesswebber/eslint-plugin/format`, which you should apply yourself (if you want to use it).  Effectively, you should use this configuration if you have additional configurations to extend that take precedence over this one and need to apply the formatting rules at the end.
+This is the default config and it is the same as using `core`, but without `@tbhesswebber/eslint-config/format`, which you should apply yourself (if you want to use it).  Effectively, you should use this configuration if you have additional configurations to extend that take precedence over this one and need to apply the formatting rules at the end.
 
 #### Peer Dependencies
 

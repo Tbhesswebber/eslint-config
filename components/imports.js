@@ -5,6 +5,21 @@ const config = {
   extends: ["plugin:import/recommended"],
   plugins: ["import"],
   rules: {
+    "import/extensions": [
+      "error",
+      "always",
+      {
+        ignorePackages: true,
+        pattern: {
+          css: "always",
+          js: "never",
+          json: "always",
+          jsx: "never",
+          ts: "never",
+          tsx: "never",
+        },
+      },
+    ],
     "import/newline-after-import": [
       "error",
       { count: 1, considerComments: false },
@@ -54,6 +69,7 @@ const config = {
         },
       },
     ],
+    "import/prefer-default-export": "off",
   },
 };
 
