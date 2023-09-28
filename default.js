@@ -16,13 +16,29 @@ const config = {
     "unicorn/no-null": "off",
   },
   overrides: [
-    {"files": ["**/*.config.js"], rules: {
-      "unicorn/prefer-module": "off"
-    }},
-    {"files": ["*-env.d.ts"], rules: {
-      "unicorn/prevent-abbreviations": "off"
-    }}
-  ]
+    {
+      files: ["**/*.config.js"],
+      rules: {
+        "unicorn/prefer-module": "off",
+      },
+    },
+    {
+      files: ["*-env.d.ts"],
+      rules: {
+        "unicorn/prevent-abbreviations": "off",
+      },
+    },
+    {
+      files: ["**/*.tsx", "**/*.jsx"],
+      rules: {
+        "unicorn/filename-case": ["error", { case: "camelCase" }],
+        "unicorn/prevent-abbreviations": [
+          "error",
+          { allowList: { Props: true } },
+        ],
+      },
+    },
+  ],
 };
 
 module.exports = config;
