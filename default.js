@@ -12,7 +12,8 @@ const config = {
   plugins: ["unicorn"],
   rules: {
     "unicorn/custom-error-definition": "error",
-    "unicorn/no-keyword-prefix": "warn"
+    "unicorn/no-keyword-prefix": "warn",
+    "unicorn/no-null": "off",
   },
   overrides: [
     {"files": ["**/*.config.js"], rules: {
