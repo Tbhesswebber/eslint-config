@@ -23,6 +23,21 @@ const config = {
   },
   rules: {
     "import/consistent-type-specifier-style": ["error", "prefer-top-level"],
+    "import/extensions": [
+      "error",
+      "always",
+      {
+        "ignorePackages": true,
+        "pattern": {
+          "css": "always",
+          "js": "never",
+          "json": "always",
+          "jsx": "never",
+          "ts": "never",
+          "tsx": "never"
+        }
+      }
+    ]
     "@typescript-eslint/consistent-type-imports": [
       "error",
       { prefer: "type-imports", fixStyle: "separate-type-imports" },
