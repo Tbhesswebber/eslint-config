@@ -3,41 +3,18 @@
  */
 const config = {
   extends: [
-    "plugin:import/typescript",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-type-checked",
     "plugin:@typescript-eslint/strict",
     "plugin:@typescript-eslint/strict-type-checked",
     "plugin:@typescript-eslint/stylistic",
   ],
-  settings: {
-    "import/resolver": {
-      typescript: true,
-      node: true,
-    },
-  },
-  plugins: ["@typescript-eslint", "import"],
+  plugins: ["@typescript-eslint"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     project: true,
   },
   rules: {
-    "import/consistent-type-specifier-style": ["error", "prefer-top-level"],
-    "import/extensions": [
-      "error",
-      "always",
-      {
-        ignorePackages: true,
-        pattern: {
-          css: "always",
-          js: "never",
-          json: "always",
-          jsx: "never",
-          ts: "never",
-          tsx: "never",
-        },
-      },
-    ],
     "@typescript-eslint/consistent-type-imports": [
       "error",
       { prefer: "type-imports", fixStyle: "separate-type-imports" },
