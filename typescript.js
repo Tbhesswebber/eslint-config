@@ -191,6 +191,12 @@ const config = {
         format: ["StrictPascalCase", "strictCamelCase"],
       },
       {
+        selector: "enumMember",
+        format: ["StrictPascalCase", "UPPER_CASE"],
+        leadingUnderscore: "allow",
+        trailingUnderscore: "allow",
+      },
+      {
         selector: "variable",
         format: ["strictCamelCase", "UPPER_CASE"],
         leadingUnderscore: "allow",
