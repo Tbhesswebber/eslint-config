@@ -5,7 +5,8 @@ const config = {
   extends: [
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
-    "airbnb",
+    "airbnb/rules/react",
+    "airbnb/rules/react-a11y",
     "airbnb/hooks",
   ],
   plugins: ["react", "react-hooks"],
