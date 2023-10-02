@@ -27,16 +27,16 @@ const config = {
       "error",
       "always",
       {
-        "ignorePackages": true,
-        "pattern": {
-          "css": "always",
-          "js": "never",
-          "json": "always",
-          "jsx": "never",
-          "ts": "never",
-          "tsx": "never"
-        }
-      }
+        ignorePackages: true,
+        pattern: {
+          css: "always",
+          js: "never",
+          json: "always",
+          jsx: "never",
+          ts: "never",
+          tsx: "never",
+        },
+      },
     ],
     "@typescript-eslint/consistent-type-imports": [
       "error",
