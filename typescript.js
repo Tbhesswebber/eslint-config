@@ -14,6 +14,13 @@ const config = {
   parserOptions: {
     project: true,
   },
+  settings: {
+    "import/resolver": {
+      typescript: {
+        alwaysTryTypes: true,
+      },
+    },
+  },
   rules: {
     "@typescript-eslint/consistent-type-imports": [
       "error",
@@ -225,6 +232,25 @@ const config = {
           regex: "^I[A-Z]",
           match: false,
         },
+      },
+      {
+        selector: [
+          "classProperty",
+          "objectLiteralProperty",
+          "typeProperty",
+          "classMethod",
+          "objectLiteralMethod",
+          "typeMethod",
+          "accessor",
+          "enumMember",
+        ],
+        format: null,
+        modifiers: ["requiresQuotes"],
+      },
+      {
+        selector: "import",
+        modifiers: "default",
+        format: ["StrictPascalCase", "strictCamelCase", "UPPER_CASE"],
       },
     ],
     "@typescript-eslint/no-require-imports": "error",
