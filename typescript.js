@@ -245,7 +245,7 @@ const config = {
       },
       {
         selector: "import",
-        modifiers: "default",
+        modifiers: ["default"],
         format: ["StrictPascalCase", "strictCamelCase", "UPPER_CASE"],
       },
     ],
