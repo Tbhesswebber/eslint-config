@@ -46,7 +46,7 @@ _:warning:Note: If you are using TypeScript and/or React, you should use the def
 
 ### `format`
 
-This config is exclusively for formatting configurations, which should appear last in your `extends` array.
+This config is exclusively for formatting configurations and should always appear last in your `extends` array.
 
 #### Peer Dependencies
 
