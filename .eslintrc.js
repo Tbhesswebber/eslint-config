@@ -6,4 +6,7 @@ module.exports = {
   env: {
     es6: true,
   },
+  rules: {
+    "unicorn/prefer-module": "off",
+  },
 };

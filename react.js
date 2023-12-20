@@ -20,7 +20,7 @@ const config = {
     ],
     "react/hook-use-state": ["warn", { allowDestructuredState: true }],
     "react/iframe-missing-sandbox": "error",
-    "react/jsx-filename-extension": ["error", {extensions: ["jsx", "tsx"]}],
+    "react/jsx-filename-extension": ["error", { extensions: ["jsx", "tsx"] }],
     "react/jsx-handler-names": [
       "error",
       {
