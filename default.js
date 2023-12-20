@@ -14,6 +14,12 @@ const config = {
     "unicorn/custom-error-definition": "error",
     "unicorn/no-keyword-prefix": "warn",
     "unicorn/no-null": "off",
+    "no-use-before-define": ["error", {
+        "functions": false,
+        "classes": false,
+        "variables": true,
+        "allowNamedExports": false
+    }],
   },
   overrides: [
     {
