@@ -15,11 +15,7 @@ const config = {
     project: true,
   },
   settings: {
-    "import/resolver": {
-      typescript: {
-        alwaysTryTypes: true,
-      },
-    },
+    "import/resolver": "typescript"
   },
   rules: {
     "@typescript-eslint/consistent-type-imports": [
