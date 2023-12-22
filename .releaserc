@@ -7,30 +7,42 @@
         "releaseRules": [
           {
             "tag": "breaking",
+            "scope": "*"
             "release": "major"
           },
           {
+            "tag": "feat",
+            "scope": "*"
+            "release": "minor"
+          },
+          {
             "tag": "fix",
+            "scope": "*"
             "release": "patch"
           },
           {
             "tag": "update",
+            "scope": "*"
             "release": "minor"
           },
           {
             "tag": "new",
+            "scope": "*"
             "release": "minor"
           },
           {
             "tag": "breaking",
+            "scope": "*"
             "release": "major"
           },
           {
             "tag": "docs",
+            "scope": "*"
             "release": "patch"
           },
           {
             "tag": "upgrade",
+            "scope": "*"
             "release": "patch"
           }
         ]
