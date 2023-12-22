@@ -7,49 +7,50 @@
         "releaseRules": [
           {
             "tag": "breaking",
-            "scope": "*"
+            "scope": "*",
             "release": "major"
           },
           {
             "tag": "feat",
-            "scope": "*"
+            "scope": "*",
             "release": "minor"
           },
           {
             "tag": "fix",
-            "scope": "*"
+            "scope": "*",
             "release": "patch"
           },
           {
             "tag": "update",
-            "scope": "*"
+            "scope": "*",
             "release": "minor"
           },
           {
             "tag": "new",
-            "scope": "*"
+            "scope": "*",
             "release": "minor"
           },
           {
             "tag": "breaking",
-            "scope": "*"
+            "scope": "*",
             "release": "major"
           },
           {
             "tag": "docs",
-            "scope": "*"
+            "scope": "*",
             "release": "patch"
           },
           {
             "tag": "upgrade",
-            "scope": "*"
+            "scope": "*",
             "release": "patch"
           }
         ]
       }
     ],
     "@semantic-release/release-notes-generator",
-    "@semantic-release/npm"
+    "@semantic-release/npm",
+    "@semantic-release/github"
   ],
   "branches": [
     "main",
