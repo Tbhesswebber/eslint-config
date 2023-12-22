@@ -1,3 +1,76 @@
+const namingConventions = [
+  {
+    selector: "default",
+    format: ["strictCamelCase"],
+    leadingUnderscore: "allow",
+    trailingUnderscore: "allow",
+  },
+  {
+    selector: "function",
+    format: ["StrictPascalCase", "strictCamelCase"],
+  },
+  {
+    selector: "enumMember",
+    format: ["StrictPascalCase", "UPPER_CASE"],
+    leadingUnderscore: "allow",
+    trailingUnderscore: "allow",
+  },
+  {
+    selector: "variable",
+    format: ["strictCamelCase"],
+    leadingUnderscore: "allow",
+    trailingUnderscore: "allow",
+  },
+  {
+    selector: "variable",
+    format: ["strictCamelCase", "UPPER_CASE"],
+    modifiers: ["const"],
+  },
+  {
+    selector: "variable",
+    types: ["boolean"],
+    format: ["StrictPascalCase"],
+    prefix: ["is", "should", "has", "can", "did", "will"],
+  },
+
+  {
+    selector: "typeLike",
+    format: ["StrictPascalCase"],
+  },
+  {
+    selector: "typeParameter",
+    format: ["PascalCase"],
+    prefix: ["T"],
+  },
+  {
+    selector: "interface",
+    format: ["PascalCase"],
+    custom: {
+      regex: "^I[A-Z]",
+      match: false,
+    },
+  },
+  {
+    selector: [
+      "classProperty",
+      "objectLiteralProperty",
+      "typeProperty",
+      "classMethod",
+      "objectLiteralMethod",
+      "typeMethod",
+      "accessor",
+      "enumMember",
+    ],
+    format: null,
+    modifiers: ["requiresQuotes"],
+  },
+  {
+    selector: "import",
+    modifiers: ["default"],
+    format: ["StrictPascalCase", "strictCamelCase", "UPPER_CASE"],
+  },
+];
+
 /**
  * @type import("eslint-define-config").ESLintConfig
  */
@@ -15,7 +88,7 @@ const config = {
     project: true,
   },
   settings: {
-    "import/resolver": "typescript"
+    "import/resolver": "typescript",
   },
   rules: {
     "@typescript-eslint/consistent-type-imports": [
@@ -180,75 +253,7 @@ const config = {
         allowTypedFunctionExpressions: false,
       },
     ],
-    "@typescript-eslint/naming-convention": [
-      "warn",
-
-      {
-        selector: "default",
-        format: ["strictCamelCase"],
-        leadingUnderscore: "allow",
-        trailingUnderscore: "allow",
-      },
-      {
-        selector: "function",
-        format: ["StrictPascalCase", "strictCamelCase"],
-      },
-      {
-        selector: "enumMember",
-        format: ["StrictPascalCase", "UPPER_CASE"],
-        leadingUnderscore: "allow",
-        trailingUnderscore: "allow",
-      },
-      {
-        selector: "variable",
-        format: ["strictCamelCase", "UPPER_CASE"],
-        leadingUnderscore: "allow",
-        trailingUnderscore: "allow",
-      },
-      {
-        selector: "variable",
-        types: ["boolean"],
-        format: ["StrictPascalCase"],
-        prefix: ["is", "should", "has", "can", "did", "will"],
-      },
-
-      {
-        selector: "typeLike",
-        format: ["StrictPascalCase"],
-      },
-      {
-        selector: "typeParameter",
-        format: ["PascalCase"],
-        prefix: ["T"],
-      },
-      {
-        selector: "interface",
-        format: ["PascalCase"],
-        custom: {
-          regex: "^I[A-Z]",
-          match: false,
-        },
-      },
-      {
-        selector: [
-          "classProperty",
-          "objectLiteralProperty",
-          "typeProperty",
-          "classMethod",
-          "objectLiteralMethod",
-          "typeMethod",
-          "accessor",
-          "enumMember",
-        ],
-        format: null,
-        modifiers: ["requiresQuotes"],
-      },
-      {
-        selector: "import",
-        modifiers: ["default"],
-        format: ["StrictPascalCase", "strictCamelCase", "UPPER_CASE"],
-      },
-    ],
+    "@typescript-eslint/naming-convention": ["warn", ...namingConventions],
     "@typescript-eslint/no-require-imports": "error",
     "@typescript-eslint/prefer-regexp-exec": "error",
     "@typescript-eslint/promise-function-async": "error",
@@ -287,6 +292,21 @@ const config = {
     "no-return-await": "off",
     "@typescript-eslint/return-await": ["error", "in-try-catch"],
   },
+  overrides: [
+    {
+      files: ["**/*.tsx", "**/*/jsx"],
+      rules: {
+        "@typescript-eslint/naming-convention": [
+          "warn",
+          ...namingConventions,
+          {
+            selector: ["variable"],
+            format: ["StrictPascalCase", "strictCamelCase"],
+          },
+        ],
+      },
+    },
+  ],
 };
 
 module.exports = config;
