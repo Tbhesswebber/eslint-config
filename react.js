@@ -11,6 +11,17 @@ const config = {
   ],
   plugins: ["react", "react-hooks"],
   rules: {
+    "unicorn/prevent-abbreviations": [
+      "error",
+      {
+        allowList: {
+          prop: true,
+          Prop: true,
+          props: true,
+          Props: true,
+        },
+      },
+    ],
     "react/function-component-definition": [
       "error",
       {
