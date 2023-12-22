@@ -3,46 +3,34 @@
     [
       "@semantic-release/commit-analyzer",
       {
-        "preset": "eslint",
+        "preset": "angular",
         "releaseRules": [
           {
-            "tag": "breaking",
-            "scope": "*",
+            "type": "breaking",
             "release": "major"
           },
           {
-            "tag": "feat",
-            "scope": "*",
+            "type": "feat",
             "release": "minor"
           },
           {
-            "tag": "fix",
-            "scope": "*",
+            "type": "fix",
             "release": "patch"
           },
           {
-            "tag": "update",
-            "scope": "*",
+            "type": "update",
             "release": "minor"
           },
           {
-            "tag": "new",
-            "scope": "*",
+            "type": "new",
             "release": "minor"
           },
           {
-            "tag": "breaking",
-            "scope": "*",
-            "release": "major"
-          },
-          {
-            "tag": "docs",
-            "scope": "*",
+            "type": "docs",
             "release": "patch"
           },
           {
-            "tag": "upgrade",
-            "scope": "*",
+            "type": "deps",
             "release": "patch"
           }
         ]
