@@ -17,11 +17,6 @@ const namingConventions = [
   },
   {
     selector: "variable",
-    format: ["strictCamelCase", "UPPER_CASE"],
-    modifiers: ["const"],
-  },
-  {
-    selector: "variable",
     types: ["boolean"],
     format: ["StrictPascalCase"],
     prefix: ["is", "should", "has", "can", "did", "will"],
@@ -256,6 +251,11 @@ const config = {
         leadingUnderscore: "allow",
         trailingUnderscore: "allow",
       },
+      {
+        selector: "variable",
+        format: ["strictCamelCase", "UPPER_CASE"],
+        modifiers: ["const"],
+      },
     ],
     "@typescript-eslint/no-require-imports": "error",
     "@typescript-eslint/prefer-regexp-exec": "error",
@@ -303,7 +303,12 @@ const config = {
           "warn",
           ...namingConventions,
           {
-            selector: ["variable"],
+            selector: "variable",
+            format: ["StrictPascalCase", "strictCamelCase", "UPPER_CASE"],
+            modifiers: ["const"],
+          },
+          {
+            selector: "variable",
             format: ["StrictPascalCase", "strictCamelCase"],
           },
         ],
