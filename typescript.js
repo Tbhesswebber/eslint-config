@@ -17,12 +17,6 @@ const namingConventions = [
   },
   {
     selector: "variable",
-    format: ["strictCamelCase"],
-    leadingUnderscore: "allow",
-    trailingUnderscore: "allow",
-  },
-  {
-    selector: "variable",
     format: ["strictCamelCase", "UPPER_CASE"],
     modifiers: ["const"],
   },
@@ -253,7 +247,16 @@ const config = {
         allowTypedFunctionExpressions: false,
       },
     ],
-    "@typescript-eslint/naming-convention": ["warn", ...namingConventions],
+    "@typescript-eslint/naming-convention": [
+      "warn",
+      ...namingConventions,
+      {
+        selector: "variable",
+        format: ["strictCamelCase"],
+        leadingUnderscore: "allow",
+        trailingUnderscore: "allow",
+      },
+    ],
     "@typescript-eslint/no-require-imports": "error",
     "@typescript-eslint/prefer-regexp-exec": "error",
     "@typescript-eslint/promise-function-async": "error",
