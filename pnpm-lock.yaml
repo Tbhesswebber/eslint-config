@@ -40,9 +40,9 @@ devDependencies:
   '@tbhesswebber/eslint-config':
     specifier: ^2.0.5
     version: 2.0.5(@typescript-eslint/eslint-plugin@6.7.2)(@typescript-eslint/parser@6.7.2)(eslint-config-airbnb-base@15.0.0)(eslint-config-airbnb@19.0.4)(eslint-config-prettier@9.0.0)(eslint-import-resolver-typescript@3.6.1)(eslint-plugin-eslint-comments@3.2.0)(eslint-plugin-import@2.28.1)(eslint-plugin-jsx-a11y@6.7.1)(eslint-plugin-prettier@5.0.0)(eslint-plugin-react-hooks@4.6.0)(eslint-plugin-react@7.33.2)(eslint-plugin-unicorn@48.0.1)(eslint@8.49.0)(prettier@3.0.3)(typescript@5.2.2)
-  conventional-changelog-eslint:
-    specifier: ^5.0.0
-    version: 5.0.0
+  conventional-changelog-angular:
+    specifier: ^7.0.0
+    version: 7.0.0
   eslint:
     specifier: ^8.49.0
     version: 8.49.0
@@ -936,11 +936,6 @@ packages:
     engines: {node: '>=16'}
     dependencies:
       compare-func: 2.0.0
-    dev: true
-
-  /conventional-changelog-eslint@5.0.0:
-    resolution: {integrity: sha512-6JtLWqAQIeJLn/OzUlYmzd9fKeNSWmQVim9kql+v4GrZwLx807kAJl3IJVc3jTYfVKWLxhC3BGUxYiuVEcVjgA==}
-    engines: {node: '>=16'}
     dev: true
 
   /conventional-changelog-writer@7.0.1:

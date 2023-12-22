@@ -18,6 +18,6 @@ jobs:
     steps:
       - uses: aslafy-z/conventional-pr-title-action@v3
         with:
-          preset: conventional-changelog-eslint
+          preset: conventional-changelog-angular
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
