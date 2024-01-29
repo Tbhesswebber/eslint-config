@@ -20,6 +20,9 @@ const config = {
         "variables": true,
         "allowNamedExports": false
     }],
+    "unicorn/no-array-callback-reference": "off",
+    "unicorn/no-array-reduce": "off",
+    "unicorn/no-array-for-each": "off",
   },
   overrides: [
     {
