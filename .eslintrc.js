@@ -1,12 +1,12 @@
 module.exports = {
-  extends: ["./core.js"],
+  extends: ['@tbhesswebber/eslint-config/default'],
   parserOptions: {
-    ecmaVersion: "latest",
+    ecmaVersion: 'latest',
   },
   env: {
     es6: true,
   },
   rules: {
-    "unicorn/prefer-module": "off",
+    'unicorn/prefer-module': 'off',
   },
 };
