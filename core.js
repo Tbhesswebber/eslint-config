@@ -3,8 +3,8 @@
  */
 const config = {
   extends: [
-    "@tbhesswebber/eslint-config/default",
-    "@tbhesswebber/eslint-config/format",
+    '@tbhesswebber/eslint-config/default',
+    '@tbhesswebber/eslint-config/format',
   ],
   plugins: [],
   rules: {},
