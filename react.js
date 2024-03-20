@@ -19,6 +19,7 @@ const config = {
           Prop: true,
           props: true,
           Props: true,
+          ref: true,
         },
       },
     ],
