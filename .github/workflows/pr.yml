@@ -11,13 +11,55 @@ permissions:
   contents: read # for checkout
 
 jobs:
-  lint:
+  lint-title:
     runs-on: ubuntu-latest
     permissions:
-      statuses: write 
+      statuses: write
     steps:
       - uses: aslafy-z/conventional-pr-title-action@v3
         with:
           preset: conventional-changelog-angular
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  verify:
+    runs-on: ubuntu-latest
+    permissions:
+      statuses: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "lts/*"
+      - name: Install dependencies
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+          run_install: |
+            - recursive: true
+      - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
+        run: npm audit signatures
+  lint-code:
+    runs-on: ubuntu-latest
+    permissions:
+      statuses: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "lts/*"
+      - name: Install dependencies
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+          run_install: |
+            - recursive: true
+      - name: Run ESLint
+        run: pnpm lint
