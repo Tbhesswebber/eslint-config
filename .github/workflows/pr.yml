@@ -40,6 +40,9 @@ jobs:
           version: 8
           run_install: |
             - recursive: true
+      # @see https://github.com/npm/cli/issues/7279
+      - name: Update npm to latest
+        run: npm install -g npm
       - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
         run: npm audit signatures
   lint-code:
