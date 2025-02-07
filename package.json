@@ -32,7 +32,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-unicorn": "^51.0.1",
     "prettier": "^3.2.5",
-    "semantic-release": "^23.0.5",
+    "semantic-release": "^24.2.1",
     "typescript": "^5.4.2"
   },
   "peerDependencies": {
